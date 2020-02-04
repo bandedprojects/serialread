@@ -2,9 +2,10 @@ const express = require('express')
 const app = express()
 var serialPort = require('serialport')
 var bodyParser = require('body-parser')
+var cors = require('cors');
 var readingFinal = "" ;
 var readingToSend = "";
-
+app.use(cors());
 app.use(bodyParser.urlencoded({
     extended: true
   }));
